@@ -9,34 +9,41 @@
 \begin{document}
 \maketitle
 
-$G = \{ 1, 4, 7, 13 \}$ er en delmengde av $\mathbb{Z}_{15}$.
-
 \oppgave{1a}
-
-Vi begynner med multiplikasjonstabellen modulo 15.
+Vi ser umiddelbart at identitetselementet $e=1$ som tilfredstiller $xe=x=ex$
+(bevis under) og skriver ut multiplikasjonstabellen, for å gjøre resten
+enklere.
 
 \begin{table}[htp]
   \centering
   \begin{tabular}{r|rrrr}
-       &  1 &  4 &  7 & 13 \\ \hline
-     1 &  1 &  4 &  7 & 13 \\
-     4 &  4 &  1 & 13 &  7 \\
-     7 &  7 & 13 &  4 &  1 \\
-    13 & 13 &  7 &  1 &  4 \\
+       &  e &  4 &  7 & 13 \\ \hline
+     e &  e &  4 &  7 & 13 \\
+     4 &  4 &  e & 13 &  7 \\
+     7 &  7 & 13 &  4 &  e \\
+    13 & 13 &  7 &  e &  4 \\
   \end{tabular}
 \end{table}
 
-Først og fremst ser vi et operasjonen er \textit{lukket}, det vil si at for
-alle $x,y \in G$ så er $xy \in G$. Dette ser vi av tabellen over.
+$G$ er en gruppe under multiplikasjon modulo 15 fordi
+\begin{itemize}
+  \item vi har et unikt identitetselement $e=1 \in G$ som tilfredstiller
+    $xe=x=ex$, fordi $x\cdot1 \mod{n} = 1\cdot x \mod{n} = x \mod{n}$,
+  \item multiplikasjonen modulo 15 er \textit{lukket}, altså vil $a\cdot b
+    \mod{15} \in G$ --- eller $ab \in G$ --- for alle $a,b \in G$ (det ser vi
+    av tabellen),
+  \item hvert element har en \textit{invers} $x^{-1}$ slik at
+    $x^{-1}x=e=xx^{-1}$ fordi $1\cdot1=e$, $4\cdot4=e$, $7\cdot13=e=13\cdot7$
+    (vi gir ingen generell operasjon for dette; siden gruppen vår er så liten
+    er det nok å gå gjennom alle mulighetene),
+  \item multiplikasjon modulo 15 er \textit{assosiativ}, altså $(xy)z = x(yz)$
+    eller
+    $(xy\mod{n})z \mod{n} = x(yz \mod{n}) \mod{n}$ (se bevis under).
+\end{itemize}
 
-\textit{Identitetselementet} må være unikt i $G$ og oppfylle $xe = x = ex$. Vi
-ser umiddelbart at $e=1$.
-
-Operasjonen må være \textit{assosiativ}, altså for tre vilkårlige element $a, b, c \in
-G$ så må $(ab)c = a(bc)$. \todo{Vis dette}
-
-Til slutt må vi vise at det finnes en \textit{invers} operasjon slik at hvert
-element $x \in G$ har en invers $x^{-1} \in G$ slik at $x^{-1}x = e = xx^{-1}$.
+\paragraph{Bevis for at multiplikasjon modulo n er assosiativt} kan gjøres på
+flere måter. Jeg syns dette var veldig vanskelig, og prøvde meg på forskjellige
+måter.
 
 \oppgave{1b}
 \oppgave{1c}
