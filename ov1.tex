@@ -29,21 +29,38 @@ $G$ er en gruppe under multiplikasjon modulo 15 fordi
 \begin{itemize}
   \item vi har et unikt identitetselement $e=1 \in G$ som tilfredstiller
     $xe=x=ex$, fordi $x\cdot1 \mod{n} = 1\cdot x \mod{n} = x \mod{n}$,
-  \item multiplikasjonen modulo 15 er \textit{lukket}, altså vil $a\cdot b
-    \mod{15} \in G$ --- eller $ab \in G$ --- for alle $a,b \in G$ (det ser vi
-    av tabellen),
+  \item multiplikasjonen modulo 15 er \textit{lukket}, altså vil $a\cdot_{15} b
+    \in G$ for alle $a,b \in G$ (det ser vi av tabellen),
   \item hvert element har en \textit{invers} $x^{-1}$ slik at
     $x^{-1}x=e=xx^{-1}$ fordi $1\cdot1=e$, $4\cdot4=e$, $7\cdot13=e=13\cdot7$
     (vi gir ingen generell operasjon for dette; siden gruppen vår er så liten
     er det nok å gå gjennom alle mulighetene),
   \item multiplikasjon modulo 15 er \textit{assosiativ}, altså $(xy)z = x(yz)$
-    eller
-    $(xy\mod{n})z \mod{n} = x(yz \mod{n}) \mod{n}$ (se bevis under).
+    eller $(x\cdot_n y)\cdot_n z = x\cdot_n(y\cdot_n z)$ (se merknad under).
 \end{itemize}
 
-\paragraph{Bevis for at multiplikasjon modulo n er assosiativt} kan gjøres på
-flere måter. Jeg syns dette var veldig vanskelig, og prøvde meg på forskjellige
-måter.
+\paragraph{Assosivitet for multiplikasjon modulo n} kan bevises på flere måter.
+Den \textit{minst} tilfredstillende jeg fant\footnote{Se
+\url{https://proofwiki.org/wiki/Modulo_Multiplication_is_Associative}},
+men som også er enklest, er å
+bruke $\llbracket a \rrbracket_n \equiv a \mod {n}$. Gitt $x,y,z < n$ har vi
+\begin{align*}
+  \llbracket a \rrbracket_n \cdot_n \llbracket b \rrbracket_n &\equiv
+    \llbracket ab \rrbracket_n \\
+    \\
+    \left(\llbracket x \rrbracket_n \cdot_n \llbracket y \rrbracket_n\right)
+    \cdot_n \llbracket z \rrbracket_n &= 
+      \llbracket xy \rrbracket_n \cdot_n \llbracket z \rrbracket_n \\
+      &= \llbracket (xy)z \rrbracket_n & \text{per definisjon} \\
+      &= \llbracket x(yz) \rrbracket_n & \text{assosivitet for
+    heltallsmultiplikasjon} \\
+      &= \llbracket x \rrbracket_n \cdot_n \llbracket yz \rrbracket_n \\
+      &= \llbracket x \rrbracket_n \cdot_n \left( \llbracket y \rrbracket_n
+    \cdot_n \llbracket z \rrbracket_n \right)
+\end{align*}
+Oppgaven ber vel ikke eksplisitt om å føre et slikt bevis, så derfor er jeg
+såpass unøyaktig og stjeler et bevis fra før. Det som står i boken for addisjon
+(Armstrong, s.~13) kunne også blitt brukt, men jeg synes den over er enklere.
 
 \oppgave{1b}
 \oppgave{1c}
