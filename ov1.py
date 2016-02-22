@@ -17,5 +17,14 @@ def table(elems):
         sys.stdout.write("\n")
         sys.stdout.flush()
 
+def r(v):
+    "Rotate dihedral group once"
+    return [v[-1]] + v[:-1]
+
+def s(v):
+    "Flip dihedral group 4 once"
+    a,b,c,d=v
+    return [d,c,b,a]
+
 if __name__ == "__main__":
     table([1,4,7,13])
