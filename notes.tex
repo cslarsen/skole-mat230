@@ -1,34 +1,48 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,twocolumn,10pt]{article}
 \input{preamble-en}
-\title{Notes for M.A.~Armstrong,\\\Huge\textit{Groups and symmetry}}
+\title{Notes for M.A.~Armstrong's \textit{Groups and symmetry}}
 \author{Christian Stigen}
 \date{March 2016}
 
 \begin{document}
   \maketitle
-  \section*{Chapter 1}
-  \paragraph{Order of operations} In $xyz$, do $z$ first, then $y$ and finally
-  $x$. $xy$ means taking the <<product>> (e.g., addition, rotation, etc.) of
-  $x$ and $y$. For example, if $r$ is to rotate a cube $90^\circ$
-  counter-clockwise, and $s$ is to flip it $180^\circ$ along the axis going
-  through two of its oppositely faced sides, then the product $sr$ means rotate
-  first, then flip.
+  \section{Symmetries of the Tetrahedron}
+  \paragraph{Symmetry group} Captures the rules of how symmetries combine for a
+  given object.
 
-  \section*{Chapter 2}
-  \paragraph{Group}  Set $G$ with <<multiplication>> (e.g., addition, rotation,
-  etc.) satisfying
+  \paragraph{Order of operations} In the \textit{product}\footnote{Rotations,
+  flips, multiplications, additions, etc. Same order as functional
+  composition.} $xyz$, do $z$ first, then $y$ and finally $x$. If order doesn't
+  matter, it's commutative (abelian). Remember to label geometric vertices.
+
+  \section{Axioms}
+  \paragraph{Group}  Set $G$ with \textit{multiplication} (addition,
+  rotation, etc.) satisfying
   \begin{itemize}
-    \item \textit{associativity}: $(xy)z = x(yz)$
-    \item \textit{identity element} $e \in G$: $xe=x=ex$
-    \item \textit{inverse} $e \in G$: $x^{-1}x=e=xx^{-1}$
+    \item \textit{associativity}, i.e.~$(xy)z = x(yz)$
+    \item \textit{identity element} $e \in G$ such that $xe=x=ex$
+    \item \textit{inverse} $e \in G$ such that $x^{-1}x=e=xx^{-1}$
   \end{itemize}
 
+  \paragraph{Properties common to all groups}
+  \begin{itemize}
+    \item The identify element of a group is unique.
+    \item The inverse of each element of a group is unique.
+  \end{itemize}
 
-
-    \paragraph{Properties common to all groups}
-    \begin{itemize}
-      \item The identify element of a group is unique.
-      \item The inverse of each element of a group is unique.
-    \end{itemize}
+  \section{Numbers}
+  \paragraph{Addition of $\mathbb{Z}, \mathbb{Q}, \mathbb{R}, \mathbb{C}$}
+  \begin{itemize}
+    \item Identity is zero
+    \item $-x$ is the inverse
+  \end{itemize}
+  \paragraph{Multiplication}
+  \begin{itemize}
+    \item For $\mathbb{Q}-\{0\}, \mathbb{Q}^+, \mathbb{R}-\{0\}, \mathbb{R}^+,
+      \{+1,-1\}, \mathbb{C}-\{0\}, \mathcal{C}\footnote{Complex numbers of
+      modulus 1}, \{\pm 1, \pm i\}$: $\underline{e=1 \,\text{and}\, x^{-1}=1/x}$.
+  \end{itemize}
+  \paragraph{$\mathbb{Z}$ under modulus $n$} $e=0, x^{-1}=n-x \,\text{for}\,
+  x\ne0$, finite abelian group and denoted $\mathbb{Z}_n$.
 
 \end{document}

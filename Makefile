@@ -1,5 +1,5 @@
 TARGETS := \
-	notater.pdf \
+	notes.pdf \
 	ov1.pdf
 
 all: $(TARGETS)
@@ -10,9 +10,9 @@ open: all
 %.eps: %.gp data.txt
 	gnuplot $<
 
-notater.pdf: notater.tex preamble.tex
+notes.pdf: notes.tex preamble.tex
 
-ov1.pdf: ov1.tex preamble.tex
+ov1.pdf: ov1.tex preamble-en.tex
 
 %.pdf: %.tex
 	pdflatex $<
