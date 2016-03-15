@@ -1,3 +1,16 @@
+OS := $(shell uname)
+MAIN := bachelor
+
+ifeq ($(OS),Linux)
+	PDFLATEX := /usr/texlive/2013/bin/x86_64-linux/pdflatex
+	BIBTEX := /usr/texlive/2013/bin/x86_64-linux/bibtex
+	OPEN := xdg-open
+else
+	PDFLATEX := pdflatex
+	BIBTEX := bibtex
+	OPEN := open
+endif
+
 TARGETS := \
 	notes.pdf \
 	ov1.pdf
@@ -15,8 +28,8 @@ notes.pdf: notes.tex preamble.tex
 ov1.pdf: ov1.tex preamble-en.tex
 
 %.pdf: %.tex
-	pdflatex $<
-	pdflatex $<
+	$(PDFLATEX) $<
+	$(PDFLATEX) $<
 
 clean:
 	rm -f $(TARGETS) $(TARGETS:.pdf=.aux) $(TARGETS:.pdf=.log)
