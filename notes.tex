@@ -39,17 +39,21 @@
   \end{itemize}
   \paragraph{Multiplication}
   \begin{itemize}
-    \item For $\mathbb{Q}-\{0\}, \mathbb{Q}^+, \mathbb{R}-\{0\}, \mathbb{R}^+,
-      \{+1,-1\}, \mathbb{C}-\{0\}, \mathcal{C}\footnote{Complex numbers of
-      modulus 1}, \{\pm 1, \pm i\}$: $\underline{e=1 \,\text{and}\, x^{-1}=1/x}$.
+    \item For $\mathbb{Q}-\{0\}$, $\mathbb{Q}^+$, $\mathbb{R}-\{0\}$,
+      $\mathbb{R}^+$,
+      $\{+1,-1\}$, $\mathbb{C}-\{0\}$, $\mathcal{C}$\footnote{Complex numbers of
+      modulus 1}, $\{\pm 1, \pm i\}$: $\underline{e=1 \,\text{and}\, x^{-1}=1/x}$.
   \end{itemize}
-  \paragraph{$\mathbb{Z}$ under addition modulus $n$} $e=0, x^{-1}=n-x \,\text{for}\,
-  x\ne0$, finite \textit{abelian} group and denoted $\mathbb{Z}_n$.
+
+  \paragraph{$\mathbb{Z}$ under addition modulus $n$} $e=0$,
+  $x^{-1}=n-x$ for $x\ne0$, finite \textit{abelian} group and denoted
+  $\mathbb{Z}_n$.
+
   \paragraph{$\mathbb{Z}$ under multiplication modulus $n$} Requires $n$ to be
   prime.
 
   \section{Dihedral Groups}
-  When $n\geq3$ we can manufacture a plate whish has $n$ equal sides. These are
+  When $n\geqslant3$ we can manufacture a plate whish has $n$ equal sides. These are
   the non-commutative \textit{dihedral rotational symmetry groups} $D_n$. E.g.
   $D_3 = \{e,r,r^2,s,rs,r^2s\}$. $x^mx^n=x^{m+n}$ and $(x^m)^n=x^{mn}$ provided
   we interpret $x^0=e$. For any multiplication table, each element in $G$
@@ -57,7 +61,7 @@
 
   $r^n=e$, $s^2=e$, $sr=r^{n-1}s$, $r^{n-1}=r^{-1}$, etc.
 
-  Each element is of form $r^a$, $r^as$ where $0\leq a\leq n-1$.
+  Each element is of form $r^a$, $r^as$ where $0\leqslant a\leqslant n-1$.
 
   For $k=a+_nb$, $r^ar^b=r^k$ and $r^a(r^bs)=r^ks$.  For $l=a+_n(n-b)$,
   $(r^as)r^b=r^ls$ and $(r^as)(r^bs)=r^l$ --- thus $r$ and $s$
@@ -130,15 +134,18 @@
       generate $S_n$.
   \end{itemize}
 
-  A given element of $S_n$ can be written as a product of transpositions in
-  many different ways. But the number of transpositions is always even or
-  always odd.
+  Any \textit{element} $\alpha$ of $S_n$ can be written as a product of
+  \textit{transpositions} in many different ways. But the number of
+  transpositions is always even or always odd. If $\alpha$ \textit{can} be
+  written as the product of an even number of transpositions, then its sign
+  must be $+1$; for odd, it is $-1$. Therefore, by the first trick above, a
+  \textit{cyclic permutation} is even precisely when its length is odd.
 
   \paragraph{Theorems}
   \begin{itemize}
     \item The even permutations in $S_n$ form a subgroup of order $n!/2$ called
       the \textbf{\textit{alternating group $A_n$}} of degree $n$.
-    \item For $n\ge 3$ the 3-cycles generate $A_n$.
+    \item For $n\geqslant 3$ the 3-cycles generate $A_n$.
   \end{itemize}
 
   \section{Isomorphisms}
