@@ -12,7 +12,6 @@ else
 endif
 
 TARGETS := \
-	notes.pdf \
 	ov1.pdf
 
 all: $(TARGETS)
@@ -23,13 +22,11 @@ open: all
 %.eps: %.gp data.txt
 	gnuplot $<
 
-notes.pdf: notes.tex preamble.tex
-
-ov1.pdf: ov1.tex preamble-en.tex
+ov1.pdf: ov1.tex preamble.tex
 
 %.pdf: %.tex
 	$(PDFLATEX) $<
 	$(PDFLATEX) $<
 
 clean:
-	rm -f $(TARGETS) $(TARGETS:.pdf=.aux) $(TARGETS:.pdf=.log)
+	rm -f $(TARGETS) $(TARGETS:.pdf=.aux) $(TARGETS:.pdf=.log) $(TARGETS:.pdf=.out)
