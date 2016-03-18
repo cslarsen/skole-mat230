@@ -12,17 +12,20 @@ else
 endif
 
 TARGETS := \
-	ov1.pdf
+	ov1.pdf \
+	ov2.pdf
 
 all: $(TARGETS)
 
 open: all
-	open ov1.pdf
+	open ov2.pdf
 
 %.eps: %.gp data.txt
 	gnuplot $<
 
 ov1.pdf: ov1.tex preamble.tex
+
+ov2.pdf: ov2.tex preamble.tex
 
 %.pdf: %.tex
 	$(PDFLATEX) $<
