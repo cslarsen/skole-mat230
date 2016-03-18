@@ -26,15 +26,27 @@ Vi vet $|R_10| = \phi{(10)} = 4$, og elementene er alle $0<x\geqslant 10$ slik
 at $\text{gcd}(x,10)=1$ (trikset over kan ikke brukes for å finne selve
 elementene). Dermed er $R_{10} = \{ 1,3,7,9 \}$. Vi ser at
 \begin{align*}
-  3^0 &= 1         & 3^2 &= 9 \\
-  3^2 &= 9         & 3^3 \Mod{10} &= 7 \\
-  3^4\Mod{10} &= 1 & 3^5\Mod{10} &= 3
+  3^0 \Mod{10} &= 1 \\
+  3^1 \Mod{10} &= 3 \\
+  3^2 \Mod{10} &= 9 \\
+  3^3 \Mod{10} &= 7 \\
+  3^4 \Mod{10} &= 1 \\
+  3^5 \Mod{10} &= 3 \\
+  \ldots
 \end{align*}
-Altså ser vi at $\langle 3 \rangle = R_{10}$, altså er $R_{10}$ er generert av
-3 og syklisk.
+Altså er $\langle 3 \rangle = R_{10}$ og $R_{10}$ er syklisk. 
+$(\mathbb{Z}_{k=4}, +_4) = \{0,1,2,3\}$ er generert av $\langle 1 \rangle$ og
+er dermed også syklisk.
 
-Gruppen $\mathbb{Z}_{k=4} = \{0,1,2,3\}$ under addisjon modulo fire. Vi ser at
+Dersom vi tar hvert element fra $\mathbb{Z}_4$ og setter inn i
+$\phi{(3^m\Mod{10})}$ så får vi alle elementene i $R_{10}$. Vi har altså laget
+en én-til-én korrespondanse mellom elementene \textit{den ene veien}. Da dette
+er endelige sett kan vi bare definere at å gå andre veien gjøres ved et
+oppslag. Dermed må $R_{10}$ være isomorf med $\mathbb{Z}_4$.
 
-Vi ser at 
+I eksempel (iv) i boka, s.~34, står det at enhver syklisk gruppe $G$ av orden
+$n$ er isomorfisk med $\mathbb{Z}_n$. Hvis $\langle x \rangle = G$, så
+definerer man $\phi\colon G \rightarrow \mathbb{Z}_n$ ved $\phi{x^m} = m
+\Mod{n}$. I vårt tilfelle er $x=3$ og $n=4$.
 
 \end{document}
