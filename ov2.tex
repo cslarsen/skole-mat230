@@ -1,4 +1,4 @@
-\documentclass[a4paper,norsk,12pt]{article}
+\documentclass[a4paper,norsk,twocolumn,12pt]{article}
 \input{preamble}
 
 \title{MAT230 --- Grupper og symmetri}
@@ -46,7 +46,30 @@ oppslag. Dermed må $R_{10}$ være isomorf med $\mathbb{Z}_4$.
 
 I eksempel (iv) i boka, s.~34, står det at enhver syklisk gruppe $G$ av orden
 $n$ er isomorfisk med $\mathbb{Z}_n$. Hvis $\langle x \rangle = G$, så
-definerer man $\phi\colon G \rightarrow \mathbb{Z}_n$ ved $\phi{x^m} = m
+definerer man $\phi\colon G \rightarrow \mathbb{Z}_n$ ved $\phi{(x^m)} = m
 \Mod{n}$. I vårt tilfelle er $x=3$ og $n=4$.
+
+\oppgave{3a}
+
+Det er tydelig at $\vec{a} \thicksim \vec{a}$ for enhver $a\in \mathbb{R}^3$,
+fordi $a_3=a_3$.
+
+Hvis $\vec{a} \thicksim \vec{b}$, så må også $\vec{b} \thicksim \vec{a}$, fordi
+$a_3=b_3$ er det samme som $b_3=a_3$, og dette gjelder for alle $a,b \in
+\mathbb{R}^3$.
+
+Hvis $\vec{a} \thicksim \vec{b}$ og $\vec{b} \thicksim \vec{c}$, så må
+$\vec{a} \thicksim \vec{c}$ fordi $a_3=b_3$ og $b_3=c_3$ impliserer at
+$a_3=c_3$.
+
+Da alle punktene over er innfridd så har vi vist at $\thicksim$ er en
+ekvivalensrelasjon på $\mathbb{R}^3$.
+
+\oppgave{3b}
+
+Vi skriver $\vec{a} \thicksim \vec{b}$ dersom $a_3 = b_3$, det vil si, at punktene
+ligger i et \textit{$xy$-plan} definert av $z=a_3=b_3$. Altså vil
+ekvivalensklassene til $\thicksim$ være vektorer i bestemte $xy$-plan. En annen
+måte er å si at $\thicksim$ er en avbildning i $xy$-planet.
 
 \end{document}
