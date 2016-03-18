@@ -10,7 +10,7 @@
 
 \section*{Oppgave 2}
 \paragraph{\textbf{a)}}
-$\phi{(n)}$ er antall $0 < x \leqslant n$ slik at $\text{gcd}{(x,n)} = 1$.
+$\phi{(n)}$ er antall $x$, $0 < x \leqslant n$ slik at $\text{gcd}{(x,n)} = 1$.
 
 Funksjonen er multiplikativ; $\phi{(10)} = \phi{(2)} \phi{(5)}$ og
 \begin{align*}
@@ -22,9 +22,10 @@ Funksjonen er multiplikativ; $\phi{(10)} = \phi{(2)} \phi{(5)}$ og
 gir $k = 1\cdot4 =4 $.
 
 \paragraph{\textbf{b)}}
-Vi vet $|R_{10}| = k = 4$, og elementene er alle $0 < r \leqslant 10$ slik
-at $\text{gcd}(r, 10) = 1$. For å finne elementene til $R_{10}$ kan vi ikke
-bruke trikset over. Håndsregning gir $R_{10} = \{ 1,3,7,9 \}$. Vi ser også at
+Vi vet $|R_{10}| = k = 4$, og $r \in (R_{10}, \cdot_{10})$ er alle $r \in
+\mathbb{Z}_{10}$ slik at $\text{gcd}(r, 10) = 1$. For å finne elementene til
+$R_{10}$ kan vi ikke bruke trikset over. Håndsregning gir $R_{10} = \{ 1,3,7,9
+\}$. Vi ser også at
 \begin{align*}
   3^\textbf{0} \Mod{10} &= \textbf{1} \\
   3^\textbf{1} \Mod{10} &= \textbf{3} \\
@@ -38,14 +39,14 @@ Altså er $R_{10} = \langle 3 \rangle$ og dermed syklisk.  $\left(
 \mathbb{Z}_{k=4}, +_4 \right) = \{0,1,2,3\}$ er generert av $\langle 1 \rangle$
 og er dermed også syklisk.
 
-Dersom vi tar hvert element $z \in \mathbb{Z}_4$ og setter inn i
-$\varphi{(3^z\Mod{10})}$ så får vi alle elementene i $R_{10}$. Vi har altså
-laget en én-til-én korrespondanse mellom elementene \textit{den ene veien},
-$\varphi\colon \mathbb{Z}_4 \rightarrow R_{10}$. Da har vi en bijeksjon, og
-$\varphi$ er en isomorfisme.
+Setter vi hvert $x \in \mathbb{Z}_4$ inn i $\varphi{(x)} = 3^x \Mod{10}$ så får
+vi alle elementene i $R_{10}$.  Videre har vi $\varphi{(x +_{10} y)} =
+3^{x +_{10} y}\Mod{10} = 3^x\Mod{10}\, 3^y\Mod{10} = \varphi{(x)}\varphi{(y)}$.
 
-Da dette er endelige sett kan vi bare definere at å gå andre veien gjøres ved
-et oppslag. Dermed må $R_{10}$ være isomorf med $\mathbb{Z}_4$.
+Vi har altså laget en én-til-én korrespondanse mellom elementene \textit{den
+ene veien}, $\varphi\colon \mathbb{Z}_4 \rightarrow R_{10}$. Men dette danner
+en bijeksjon, og da vet vi at den inverse også eksisterer, og dermed er $\phi$
+en isomorfisme.
 
 I eksempel (iv) i Armstrong, s.~34, står det at enhver syklisk gruppe $G$ av
 orden $n$ er isomorfisk med $\mathbb{Z}_n$. Hvis $\langle x \rangle = G$, så
