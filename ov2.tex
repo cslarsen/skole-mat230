@@ -1,4 +1,4 @@
-\documentclass[a4paper,norsk,twocolumn,12pt]{article}
+\documentclass[a4paper,norsk,twocolumn,11pt]{article}
 \input{preamble}
 
 \title{MAT230 --- Grupper og symmetri}
@@ -12,7 +12,9 @@
 \oppgave{2a}
 
 $\phi{(n)}$ er antall $0 < x \leqslant n$ slik at $\text{gcd}{(x,n)} = 1$.
-Funksjonen er multiplikativ, så $\phi{(10)} = \phi{(2)}\phi{(5)}$:
+
+Funksjonen er multiplikativ, dermed er $\phi{(10)} = \phi{(2)} \phi{(5)}$
+og
 \begin{align*}
   \text{gcd}(1, 2) = 1 & \qquad\text{gcd}(1, 5) = 1 \\
                        & \qquad\text{gcd}(2, 5) = 1 \\
@@ -67,9 +69,10 @@ ekvivalensrelasjon på $\mathbb{R}^3$.
 
 \oppgave{3b}
 
-Vi skriver $\vec{a} \thicksim \vec{b}$ dersom $a_3 = b_3$, det vil si, at punktene
-ligger i et \textit{$xy$-plan} definert av $z=a_3=b_3$. Altså vil
-ekvivalensklassene til $\thicksim$ være vektorer i bestemte $xy$-plan. En annen
-måte er å si at $\thicksim$ er en avbildning i $xy$-planet.
+For en vilkårlig $\vec{a} \in \mathbb{R}^3$ så vil $\mathscr{R}(\vec{a})$ være
+\textit{ekvivalensklassen} til $\vec{a}$, det vil si alle vektorer $\vec{b}$
+som har samme $z$-komponent $b_3=a_3$. Med andre ord er dette en
+\textbf{\textit{avbildning av vektorene i $xy$-planet}}
+definert ved $z=a_3$.
 
 \end{document}
