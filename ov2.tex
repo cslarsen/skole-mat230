@@ -50,7 +50,6 @@ definerer man $\phi\colon G \rightarrow \mathbb{Z}_n$ ved $\phi{(x^m)} = m
 \Mod{n}$. I vårt tilfelle er $x=3$ og $n=4$.
 
 \section*{Oppgave 3}
-
 \paragraph{\textbf{a)}}
 Det er tydelig at $\vec{a} \thicksim \vec{a}$ for enhver $a\in \mathbb{R}^3$,
 fordi $a_3=a_3$.
@@ -72,5 +71,27 @@ For en vilkårlig $\vec{a} \in \mathbb{R}^3$ så vil $\mathscr{R}(\vec{a})$ vær
 som har samme $z$-komponent $b_3=a_3$. Med andre ord er dette en
 \textbf{\textit{avbildning av vektorene i $xy$-planet}}
 definert ved $z=a_3$.
+
+\section*{Oppgave 6}
+For at $\thicksim$ skal være en ekvivalensrelasjon på $X$ må vi ha (1) $x\in X$
+slik at $x \thicksim x$, (2) hvis $x \thicksim y$ så er $y \thicksim x$ for to
+$x,y \in X$ og (3) hvis $x \thicksim y$ og $y \thicksim z$ så må $x \thicksim
+z$ for tre $x,y,z \in X$.
+
+La oss først \textbf{\textit{anta}}\footnote{Oppgaven sier ikke om det er $n
+\in \mathbb{N}^+$ eller $n \in \mathbb{N}^0$. Vi velger $\mathbb{N}^+$, ellers
+blir oppgaven triviell.} at det finnes en isomorfisme og et tall $n \in
+\mathbb{N}^+$slik at $\phi\colon \mathbb{Z}^n \times H_n \rightarrow
+\mathbb{Z}^n \times H_2$, for to vilkårlige $H<G$.  (1) Da vil $\mathbb{Z}^n
+\times H \rightarrow \mathbb{Z}^n \times H$ være en bijekson på seg selv.
+
+(2) Da $\phi$ er en bijeksjon må det finnes en invers $\phi^{-1}$, per
+definisjon: $H_1 \thicksim H_2$ impliserer at det finnes $H_2 \thicksim H_1$.
+
+(3) Hvis $\phi\colon H \rightarrow H'$ og $\psi\colon H' \rightarrow H''$ begge
+er isomorfismer, så må komposisjonen $\psi\phi\colon H \rightarrow H''$ også
+være en isomorfisme.
+
+Det som nå gjenstår er å vise at isomorfismen $\phi$ faktisk finnes.
 
 \end{document}
