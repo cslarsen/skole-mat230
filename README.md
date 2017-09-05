@@ -1,1 +1,1 @@
-Private repo for Christian Stigen Larsen.
+Øvinger i MAT-230 ved UiS av Christian Stigen Larsen.
